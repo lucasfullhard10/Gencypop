@@ -1,0 +1,8 @@
+{
+  "name": "Gency Pop",
+  "description": "Website profissional da Gency Pop. Criação de sites, lojas virtuais, automações e soluções digitais inovadoras.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
