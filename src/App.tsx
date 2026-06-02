@@ -27,6 +27,7 @@ import { PortfolioCard } from './components/PortfolioCard';
 import { TestimonialCard } from './components/TestimonialCard';
 import { QuoteModal } from './components/QuoteModal';
 import { AnimatedBackground } from './components/AnimatedBackground';
+import { SolutionsSection } from './components/SolutionsSection';
 
 export default function App() {
   const [modalOpen, setModalOpen] = useState(false);
@@ -39,6 +40,19 @@ export default function App() {
 
   const handleOpenQuoteGeneral = () => {
     setSelectedService(null);
+    setModalOpen(true);
+  };
+
+  const handleOpenSolutionQuote = (solutionName: string, placeholderGoal: string) => {
+    setSelectedService({
+      id: `sol-${solutionName.toLowerCase().replace(/\s+/g, '-')}`,
+      name: `${solutionName}`,
+      shortDesc: `Plano Profissional: ${solutionName}`,
+      longDesc: `Plano Profissional: ${solutionName}`,
+      iconName: 'Sparkles',
+      slug: 'solucoes',
+      placeholderText: placeholderGoal
+    });
     setModalOpen(true);
   };
 
@@ -286,6 +300,12 @@ export default function App() {
 
         </div>
       </section>
+
+      {/* Solutions / Professional Packages and Guarantee Section */}
+      <SolutionsSection
+        onSelectSolution={handleOpenSolutionQuote}
+        speakOnWhatsApp={speakOnWhatsAppGeneral}
+      />
 
       {/* 5. SEÇÃO DE BENEFÍCIOS (BENEFITS SECTION) */}
       <section id="beneficios" className="py-24 relative border-t border-white/5 bg-[#080b0f]">
