@@ -8,6 +8,12 @@ export interface Service {
   placeholderText: string;
   badge?: string;
   features?: string[];
+  project?: {
+    name: string;
+    url: string;
+    imageUrl: string;
+    imageAlt: string;
+  };
 }
 
 export interface Benefit {

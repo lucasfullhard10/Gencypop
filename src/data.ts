@@ -10,7 +10,13 @@ export const SERVICES: Service[] = [
     iconName: 'Laptop',
     badge: 'Mais Desejado',
     placeholderText: 'Quais páginas deseja no site? Descreva o principal objetivo do seu negócio.',
-    features: ['Código limpo e otimizado', 'Design exclusivo e moderno', 'Estrutura focada em conversão', 'Configurado para todos os dispositivos']
+    features: ['Código limpo e otimizado', 'Design exclusivo e moderno', 'Estrutura focada em conversão', 'Configurado para todos os dispositivos'],
+    project: {
+      name: 'Nova E-commerce Premium',
+      url: 'https://nova-e-commerce-premium.vercel.app/',
+      imageUrl: '/images/agency/digital-products-showcase.jpg',
+      imageAlt: 'Representação visual do projeto demonstrativo Nova E-commerce Premium desenvolvido pela GencyPop.'
+    }
   },
   {
     id: 'ecommerce',
@@ -21,7 +27,13 @@ export const SERVICES: Service[] = [
     iconName: 'ShoppingBag',
     badge: 'Alta Conversão',
     placeholderText: 'Como deseja sua loja virtual? Quais produtos irá vender e se possui referências?',
-    features: ['Checkout transparente integrado', 'Gestão fácil de produtos', 'Layout otimizado para celulares', 'Estatísticas de vendas detalhadas']
+    features: ['Checkout transparente integrado', 'Gestão fácil de produtos', 'Layout otimizado para celulares', 'Estatísticas de vendas detalhadas'],
+    project: {
+      name: 'Auren Casa',
+      url: 'https://auren-casa.vercel.app/',
+      imageUrl: '/images/agency/web-projects-showcase.jpg',
+      imageAlt: 'Representação visual da loja virtual Auren Casa criada como projeto demonstrativo pela GencyPop.'
+    }
   },
   {
     id: 'institutional',
@@ -31,7 +43,13 @@ export const SERVICES: Service[] = [
     longDesc: 'Criamos sites empresariais que funcionam como os melhores cartões de visita corporativos do mundo. Ideal para consultorias, indústrias, prestadores de serviços e holdings.',
     iconName: 'Building2',
     placeholderText: 'Quais seções ou páginas gostaria de incluir? (ex: Quem somos, Serviços, Blog, Contato...)',
-    features: ['Sessões estruturadas estrategicamente', 'SEO de primeira qualidade', 'Área de contato e captação rápida', 'Carregamento instantâneo']
+    features: ['Sessões estruturadas estrategicamente', 'SEO de primeira qualidade', 'Área de contato e captação rápida', 'Carregamento instantâneo'],
+    project: {
+      name: 'Ateliê Noma',
+      url: 'https://atelie-noma-arquitetura-e-interiore.vercel.app/',
+      imageUrl: '/images/agency/web-projects-showcase.jpg',
+      imageAlt: 'Representação visual do site institucional Ateliê Noma criado como projeto demonstrativo pela GencyPop.'
+    }
   },
   {
     id: 'landing-pages',
@@ -42,7 +60,13 @@ export const SERVICES: Service[] = [
     iconName: 'Compass',
     badge: 'Foco em Vendas',
     placeholderText: 'Qual produto ou serviço você vai anunciar nesta página? Possui material ou referência?',
-    features: ['Copywriting direcionado', 'Layout otimizado para celulares', 'Integração de pixel de rastreio', 'Formulários rápidos e dinâmicos']
+    features: ['Copywriting direcionado', 'Layout otimizado para celulares', 'Integração de pixel de rastreio', 'Formulários rápidos e dinâmicos'],
+    project: {
+      name: 'Onodera Estética',
+      url: 'https://onodera-estetica.vercel.app/',
+      imageUrl: '/images/agency/gencypop-development-process.jpg',
+      imageAlt: 'Representação visual da landing page Onodera Estética criada como projeto demonstrativo pela GencyPop.'
+    }
   },
   {
     id: 'automations',
@@ -53,7 +77,13 @@ export const SERVICES: Service[] = [
     iconName: 'Zap',
     badge: 'Produtividade',
     placeholderText: 'Quais tarefas quer automatizar hoje? (ex: Enviar mensagem no WhatsApp quando o cliente assina, atualizar CRM...)',
-    features: ['Integração com n8n, Make ou Webhooks', 'Disparos instantâneos no WhatsApp', 'Sincronização com planilhas e CRMs', 'Notificações inteligentes']
+    features: ['Integração com n8n, Make ou Webhooks', 'Disparos instantâneos no WhatsApp', 'Sincronização com planilhas e CRMs', 'Notificações inteligentes'],
+    project: {
+      name: 'GencyFlow',
+      url: 'https://gencyflow.vercel.app/',
+      imageUrl: '/images/agency/ai-crm-automation.jpg',
+      imageAlt: 'Representação visual do sistema de automação GencyFlow.'
+    }
   },
   {
     id: 'ai-integrations',
@@ -64,7 +94,13 @@ export const SERVICES: Service[] = [
     iconName: 'Cpu',
     badge: 'Inovação',
     placeholderText: 'Como você imagina a IA trabalhando na sua empresa? (ex: Chatbot inteligente no WhatsApp, assistente web...)',
-    features: ['Conexão com LLMs comerciais', 'Treinamento com seus dados reais', 'Atendimento humanizado 24/7', 'Automação cognitiva avançada']
+    features: ['Conexão com LLMs comerciais', 'Treinamento com seus dados reais', 'Atendimento humanizado 24/7', 'Automação cognitiva avançada'],
+    project: {
+      name: 'FlowDesk CRM',
+      url: 'https://flowdesk-crm-phi.vercel.app/',
+      imageUrl: '/images/agency/ai-crm-automation.jpg',
+      imageAlt: 'Representação visual do sistema FlowDesk CRM com inteligência artificial e automações.'
+    }
   },
   {
     id: 'blogs',
@@ -74,7 +110,13 @@ export const SERVICES: Service[] = [
     longDesc: 'Desenvolvemos blogs modernos com foco em legibilidade de leitura, facilidade extrema de postagem de novos artigos e design estruturado para anúncios e leads de captura.',
     iconName: 'BookOpen',
     placeholderText: 'Sobre qual nicho será o seu blog? Deseja sistema de newsletter ou anúncios?',
-    features: ['Painel administrativo intuitivo', 'Estrutura otimizada para SEO', 'Tempos mínimos de renderização', 'Integração com mídias sociais']
+    features: ['Painel administrativo intuitivo', 'Estrutura otimizada para SEO', 'Tempos mínimos de renderização', 'Integração com mídias sociais'],
+    project: {
+      name: 'Nexus Insights',
+      url: 'https://nexus-insights-tau.vercel.app/',
+      imageUrl: '/images/agency/digital-products-showcase.jpg',
+      imageAlt: 'Representação visual do portal de conteúdo Nexus Insights criado como projeto demonstrativo pela GencyPop.'
+    }
   },
   {
     id: 'portfolios',
@@ -84,7 +126,13 @@ export const SERVICES: Service[] = [
     longDesc: 'Seja para arquitetos, designers, programadores ou fotógrafos. Construímos uma experiência visual fluida que conta sua história profissional por meio de uma curadoria imersiva.',
     iconName: 'UserCheck',
     placeholderText: 'Quais tipos de projetos deseja expor? Deseja galeria de fotos ou vídeos?',
-    features: ['Animações fluidas de galeria', 'Seção interativa de biografia', 'Fácil atualização de arquivos', 'Integrações de mídias de alta definição']
+    features: ['Animações fluidas de galeria', 'Seção interativa de biografia', 'Fácil atualização de arquivos', 'Integrações de mídias de alta definição'],
+    project: {
+      name: 'Caio Velar',
+      url: 'https://caio-velar-fotografia-and-direcao-c.vercel.app/',
+      imageUrl: '/images/agency/web-projects-showcase.jpg',
+      imageAlt: 'Representação visual do portfólio profissional Caio Velar criado como projeto demonstrativo pela GencyPop.'
+    }
   },
   {
     id: 'gmb',
@@ -94,7 +142,13 @@ export const SERVICES: Service[] = [
     longDesc: 'Configuramos, otimizamos e posicionamos seu perfil do Google Meu Negócio / Maps. Através de técnicas de SEO focado, garantimos que sua empresa seja encontrada por quem está ativamente buscando seus serviços na sua cidade.',
     iconName: 'MapPin',
     placeholderText: 'Qual o ramo de atividade da sua empresa de nível regional e em qual cidade atua?',
-    features: ['Otimização completa de palavras-chave', 'Estratégia para atração de avaliações', 'Geolocalização estratégica no Maps', 'Visual altamente profissional']
+    features: ['Otimização completa de palavras-chave', 'Estratégia para atração de avaliações', 'Geolocalização estratégica no Maps', 'Visual altamente profissional'],
+    project: {
+      name: 'Google Meu Negócio',
+      url: 'https://demonstrativo-google-meu-negocio.vercel.app/',
+      imageUrl: '/images/agency/digital-products-showcase.jpg',
+      imageAlt: 'Representação visual do projeto demonstrativo de Google Meu Negócio e SEO local da GencyPop.'
+    }
   }
 ];
 
