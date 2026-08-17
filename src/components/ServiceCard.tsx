@@ -1,7 +1,33 @@
 import React from 'react';
 import { motion } from 'motion/react';
-import * as LucideIcons from 'lucide-react';
+import {
+  ArrowRight,
+  BookOpen,
+  Building2,
+  Compass,
+  Cpu,
+  HelpCircle,
+  Laptop,
+  MapPin,
+  ShoppingBag,
+  UserCheck,
+  Zap,
+  type LucideIcon
+} from 'lucide-react';
 import { Service } from '../types';
+import { ProjectPreview } from './ProjectPreview';
+
+const SERVICE_ICONS: Record<string, LucideIcon> = {
+  BookOpen,
+  Building2,
+  Compass,
+  Cpu,
+  Laptop,
+  MapPin,
+  ShoppingBag,
+  UserCheck,
+  Zap
+};
 
 interface ServiceCardProps {
   service: Service;
@@ -11,11 +37,8 @@ interface ServiceCardProps {
 export const ServiceCard: React.FC<ServiceCardProps> = ({ service, onSelect }) => {
   // Safe helper to dynamically retrieve Lucide Icons
   const renderIcon = (iconName: string) => {
-    const IconComponent = (LucideIcons as any)[iconName];
-    if (IconComponent) {
-      return <IconComponent className="w-7 h-7 text-white" />;
-    }
-    return <LucideIcons.HelpCircle className="w-7 h-7 text-white" />;
+    const IconComponent = SERVICE_ICONS[iconName] ?? HelpCircle;
+    return <IconComponent className="h-7 w-7 text-white" />;
   };
 
   const getGlowColor = (id: string) => {
@@ -45,12 +68,12 @@ export const ServiceCard: React.FC<ServiceCardProps> = ({ service, onSelect }) =
       viewport={{ once: true, margin: '-50px' }}
       transition={{ duration: 0.5 }}
       whileHover={{ y: -6 }}
-      className={`group relative flex flex-col justify-between p-6 md:p-8 rounded-3xl glass-effect glass-effect-hover transition-all duration-300 overflow-hidden h-full ${getGlowColor(service.id)}`}
+      className={`group relative flex h-full flex-col overflow-hidden rounded-3xl p-5 transition-all duration-300 glass-effect glass-effect-hover sm:p-6 ${getGlowColor(service.id)}`}
     >
       {/* Decorative Blur Background Circle */}
       <div className="absolute -top-10 -right-10 w-24 h-24 bg-white/2 rounded-full blur-2xl group-hover:bg-white/5 transition-all" />
 
-      <div>
+      <div className="flex flex-1 flex-col">
         {/* Header Icon + Badge */}
         <div className="flex items-center justify-between mb-5">
           <div className={`p-4 rounded-2xl bg-white/5 border border-white/10 group-hover:scale-110 transition-transform duration-300 flex items-center justify-center`}>
@@ -76,7 +99,7 @@ export const ServiceCard: React.FC<ServiceCardProps> = ({ service, onSelect }) =
 
         {/* Core Sub-features bullet lines */}
         {service.features && (
-          <ul className="space-y-2 mb-8 border-t border-white/5 pt-4">
+          <ul className="mb-5 space-y-2 border-t border-white/5 pt-4">
             {service.features.map((feature, idx) => (
               <li key={idx} className="flex items-center gap-2.5 text-xs text-gray-400">
                 <span className={`w-1.5 h-1.5 rounded-full bg-gradient-to-r ${getBorderGradient(service.id)}`} />
@@ -85,20 +108,22 @@ export const ServiceCard: React.FC<ServiceCardProps> = ({ service, onSelect }) =
             ))}
           </ul>
         )}
+
+        {service.project && <ProjectPreview project={service.project} />}
       </div>
 
-      {/* Button CTA */}
+      {/* Primary conversion CTA */}
       <button
         onClick={() => onSelect(service)}
-        className={`w-full py-3 px-5 rounded-xl font-bold text-xs tracking-wider uppercase flex items-center justify-center gap-2 overflow-hidden relative cursor-pointer group-hover:shadow-[0_4px_12px_rgba(0,0,0,0.3)] transition-all`}
+        className="relative mt-4 flex min-h-12 w-full cursor-pointer items-center justify-center gap-2 overflow-hidden rounded-xl px-5 py-3 text-xs font-bold uppercase tracking-wider transition-all group-hover:shadow-[0_4px_12px_rgba(0,0,0,0.3)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#59d533] focus-visible:ring-offset-2 focus-visible:ring-offset-[#0f1319]"
       >
         {/* Background gradient mask */}
-        <div className={`absolute inset-0 bg-gradient-to-r ${getBorderGradient(service.id)} opacity-10 group-hover:opacity-100 transition-opacity duration-300`} />
+        <div className={`absolute inset-0 bg-gradient-to-r ${getBorderGradient(service.id)} opacity-90 transition-opacity duration-300 group-hover:opacity-100`} />
         
         {/* Content text */}
         <span className="relative z-10 text-white group-hover:text-white transition-colors flex items-center gap-1.5">
           Solicitar Serviço
-          <LucideIcons.ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
+          <ArrowRight size={14} className="transition-transform group-hover:translate-x-1" />
         </span>
       </button>
     </motion.div>

@@ -1,7 +1,29 @@
 import React from 'react';
 import { motion } from 'motion/react';
-import * as LucideIcons from 'lucide-react';
+import {
+  Activity,
+  Award,
+  Check,
+  Gauge,
+  Palette,
+  Share2,
+  ShieldCheck,
+  Smartphone,
+  Workflow,
+  type LucideIcon
+} from 'lucide-react';
 import { Benefit } from '../types';
+
+const BENEFIT_ICONS: Record<string, LucideIcon> = {
+  Activity,
+  Award,
+  Gauge,
+  Palette,
+  Share2,
+  ShieldCheck,
+  Smartphone,
+  Workflow
+};
 
 interface BenefitItemProps {
   benefit: Benefit;
@@ -11,11 +33,8 @@ interface BenefitItemProps {
 export const BenefitItem: React.FC<BenefitItemProps> = ({ benefit, index }) => {
   // Safe helper to dynamically retrieve Lucide Icons
   const renderIcon = (iconName: string) => {
-    const IconComponent = (LucideIcons as any)[iconName];
-    if (IconComponent) {
-      return <IconComponent className="w-6 h-6 text-[#00befc]" />;
-    }
-    return <LucideIcons.Check className="w-6 h-6 text-[#00befc]" />;
+    const IconComponent = BENEFIT_ICONS[iconName] ?? Check;
+    return <IconComponent className="h-6 w-6 text-[#00befc]" />;
   };
 
   // Give a staggering animation delay based on element index

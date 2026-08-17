@@ -3,17 +3,11 @@ import { motion } from 'motion/react';
 import {
   ArrowRight,
   Phone,
-  Layers,
   Sparkles,
-  Zap,
   ArrowUpRight,
-  Send,
   Linkedin,
   Instagram,
   Facebook,
-  Bot,
-  MessageSquare,
-  Network,
   Mail
 } from 'lucide-react';
 
@@ -165,89 +159,43 @@ export default function App() {
               </motion.div>
             </div>
 
-            {/* Interactive Futuristic Terminal / Workspace mockup */}
-            <div className="lg:col-span-5 relative">
+            {/* Visual representation of the agency's development process */}
+            <div className="relative lg:col-span-5">
               <motion.div
                 initial={{ opacity: 0, scale: 0.9, rotate: 1 }}
                 animate={{ opacity: 1, scale: 1, rotate: 0 }}
                 transition={{ duration: 0.7 }}
-                className="relative mx-auto w-full max-w-[450px] glass-effect p-5 rounded-3xl glow-card shadow-2xl overflow-hidden"
+                className="glow-card relative mx-auto w-full max-w-[560px] overflow-hidden rounded-3xl border border-white/10 bg-[#07090d] p-2 shadow-2xl"
               >
-                {/* Simulated window header bar */}
-                <div className="flex items-center justify-between pb-4 border-b border-white/5 mb-4 select-none">
+                <div aria-hidden="true" className="flex h-9 items-center justify-between px-3 select-none">
                   <div className="flex items-center gap-1.5">
-                    <span className="w-3 h-3 rounded-full bg-red-500/80" />
-                    <span className="w-3 h-3 rounded-full bg-yellow-500/80" />
-                    <span className="w-3 h-3 rounded-full bg-green-500/80" />
+                    <span className="h-2.5 w-2.5 rounded-full bg-red-500/80" />
+                    <span className="h-2.5 w-2.5 rounded-full bg-yellow-500/80" />
+                    <span className="h-2.5 w-2.5 rounded-full bg-green-500/80" />
                   </div>
-                  <span className="text-[10px] font-mono text-gray-500 tracking-wider">GENCYPOP.PRO</span>
+                  <span className="font-mono text-[9px] tracking-wider text-gray-500">GENCYPOP.COM.BR</span>
                 </div>
 
-                {/* Styled Editor / Live Metrics Workspace */}
-                <div className="space-y-4">
-                  {/* Performance metric container */}
-                  <div className="flex items-center justify-between bg-white/2 border border-white/5 p-4 rounded-2xl">
-                    <div className="flex items-center gap-3">
-                      <div className="p-2 ml-1 rounded-lg bg-emerald-500/10 text-emerald-400">
-                        <Zap size={20} className="fill-emerald-400/20" />
-                      </div>
-                      <div>
-                        <div className="text-[10px] uppercase font-bold text-gray-400 tracking-widest">Velocidade Google</div>
-                        <div className="text-sm font-bold text-white">Carregamento Instantâneo</div>
-                      </div>
-                    </div>
-                    <div className="w-11 h-11 rounded-full border-2 border-emerald-500/30 flex items-center justify-center font-mono text-xs font-bold text-emerald-400 bg-emerald-500/5 select-none">
-                      A+
-                    </div>
-                  </div>
-
-                  {/* AI Assistance card block */}
-                  <div className="flex items-center justify-between bg-white/2 border border-white/5 p-4 rounded-2xl">
-                    <div className="flex items-center gap-3">
-                      <div className="p-2 ml-1 rounded-lg bg-sky-500/10 text-[#00befc]">
-                        <Bot size={20} />
-                      </div>
-                      <div>
-                        <div className="text-[10px] uppercase font-bold text-gray-400 tracking-widest">Sistemas Customizados</div>
-                        <div className="text-sm font-bold text-white">Integrações Inteligentes de IA</div>
-                      </div>
-                    </div>
-                    <div className="text-xs py-1 px-2.5 rounded-md bg-[#00befc]/10 text-[#00befc] font-bold select-none animate-pulse-slow">
-                      Ativo
-                    </div>
-                  </div>
-
-                  {/* Interactive code box snippet layout */}
-                  <div className="bg-[#05070a] border border-white/5 p-4 rounded-2xl font-mono text-xs text-gray-400 space-y-1">
-                    <div className="text-emerald-400 font-medium">const agência = "Gency Pop";</div>
-                    <div className="text-blue-400 font-medium">const projeto = &#123;</div>
-                    <div className="pl-4">foco: <span className="text-amber-400">"Altíssima Conversão"</span>,</div>
-                    <div className="pl-4">design: <span className="text-amber-400">"Exclusivo & Moderno"</span>,</div>
-                    <div className="pl-4">suporte: <span className="text-green-400">true</span></div>
-                    <div className="text-blue-400 font-medium">&#125;;</div>
-                    <div className="text-pink-400 mt-2">await agência.criarSucesso(projeto);</div>
-                  </div>
-
-                  {/* Conversions success graph placeholder */}
-                  <div className="bg-[#111622] rounded-2xl p-4 border border-white/5 flex items-center justify-between">
+                <div className="relative aspect-video overflow-hidden rounded-2xl border border-white/8">
+                  <img
+                    src="/images/agency/gencypop-development-process.jpg"
+                    alt="Processo de desenvolvimento da GencyPop, do wireframe e código até a interface e publicação do produto digital."
+                    width={1280}
+                    height={720}
+                    fetchPriority="high"
+                    decoding="sync"
+                    className="h-full w-full object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#05070a]/90 via-transparent to-transparent" />
+                  <div className="absolute inset-x-4 bottom-4 flex items-end justify-between gap-4">
                     <div>
-                      <div className="text-[10px] uppercase font-bold text-gray-400 tracking-widest">Faturamento Semanal</div>
-                      <div className="text-base font-bold text-[#59d533] mt-0.5">+R$ 48.250,00</div>
+                      <p className="text-[9px] font-extrabold uppercase tracking-[0.2em] text-[#59d533]">Processo completo</p>
+                      <p className="mt-1 text-sm font-bold text-white sm:text-base">Da ideia ao produto publicado</p>
                     </div>
-                    <div className="flex gap-1 items-end h-8">
-                      <span className="w-1.5 h-3 bg-white/10 rounded-full" />
-                      <span className="w-1.5 h-5 bg-white/10 rounded-full" />
-                      <span className="w-1.5 h-4 bg-[#59d533]/40 rounded-full" />
-                      <span className="w-1.5 h-7 bg-[#59d533]/70 rounded-full animate-bounce" />
-                      <span className="w-1.5 h-8 bg-[#59d533] rounded-full" />
-                    </div>
+                    <span className="hidden rounded-full border border-[#00befc]/25 bg-[#00befc]/10 px-3 py-1.5 text-[9px] font-bold uppercase tracking-wider text-[#00befc] sm:block">
+                      Sites • Sistemas • IA
+                    </span>
                   </div>
-                </div>
-
-                {/* Outer floating visual node bubbles */}
-                <div className="absolute -bottom-6 -left-6 bg-white/5 border border-white/10 p-3 rounded-2xl shadow-xl backdrop-blur-md flex items-center gap-2.5 animate-float select-none">
-                  <div className="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-ping" />
-                  <span className="text-[10px] font-bold text-white tracking-wide uppercase">Vendas no WhatsApp Ativas</span>
                 </div>
               </motion.div>
             </div>
